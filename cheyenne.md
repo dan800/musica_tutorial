@@ -1,5 +1,5 @@
 ### commands for running on MUSICA v1.0 on NCAR's cheyenne HPC system
-Here we are using a regionally refined grid over the UK. The --user-mods-dir
+Here we are using a regionally refined grid over the UK. The --user-mods-dir 
 ```
 $ git clone https://github/ESCOMP/CESM.git UK01
 Cloning into 'UK01'...
