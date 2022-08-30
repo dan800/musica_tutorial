@@ -2,44 +2,36 @@
 ! namelist_var = new_namelist_value 
  
 &dyn_se_inparm
- se_mesh_file                = '/glade/work/emmons/VRM_Files//ne0np4.UK01.ne30x4//grids/UK01_ne30x4_EXODUS.nc'
- se_hypervis_scaling         =  3.0D0
- se_hypervis_subcycle        =  3
- se_nsplit                   =  6
- se_rsplit                   =  4
+ se_mesh_file                = '/glade/work/emmons/VRM_Files/ne0np4.UK01.ne30x4/grids/UK01_ne30x4_EXODUS.nc'
+ se_hypervis_subcycle        =  2
+ se_nsplit                   =  2
+ se_rsplit                   =  3
  se_qsplit                   =  1
- se_nu_top                   =  1.0e5
- se_hypervis_power           =  0
  se_hypervis_subcycle_q      =  1
- se_hypervis_subcycle_sponge =  1
+ se_hypervis_subcycle_sponge =  2
  se_refined_mesh             = .true.
- se_ne                       =  0
- se_nu                       = -1
- se_nu_div                   = -1
- se_nu_p                     = -1
- se_ftype                      =  2
- se_fv_nphys                   =  0
- se_fvm_supercycling           = -1
- se_fvm_supercycling_jet       = -1
- se_horz_num_threads           =  0
- se_hypervis_dynamic_ref_state =  .false.
- se_kmax_jet                   = -1
- se_kmin_jet                   = -1
- se_large_courant_incr         =  .true.
- se_lcp_moist                  =  .true.
- se_limiter_option             =  8
- se_phys_dyn_cp                =  1
- se_statediag_numtrac          =  3
- se_statefreq                  =  0
- se_tracer_num_threads         =  0
- se_tstep_type                 =  4
- se_vert_num_threads           =  0
 /
 
+cld_macmic_num_steps		=  2
+
 &chem_inparm
-drydep_srf_file = '/glade/work/emmons/VRM_Files//ne0np4.UK01.ne30x4//atmsrf/atmsrf_ne0np4.UK01.ne30x4_220819.nc'
+drydep_srf_file = '/glade/work/emmons/VRM_Files/ne0np4.UK01.ne30x4/atmsrf/atmsrf_ne0np4.UK01.ne30x4_220819.nc'
 /
 &cam_initfiles_nl
- bnd_topo       = '/glade/work/emmons/VRM_Files//ne0np4.UK01.ne30x4//topo/topo_ne0np4.UK01.ne30x4_nc3000_Co060_Fi001_MulG_PF_RR_Nsw042_220819.nc'
- ncdata         = '/glade/work/emmons/VRM_Files//ne0np4.UK01.ne30x4//inic/cami-mam4_0000-01-01_ne0np4.UK01.ne30x4_L32_c220819.nc'
+ bnd_topo       = '/glade/work/emmons/VRM_Files/ne0np4.UK01.ne30x4/topo/topo_ne0np4.UK01.ne30x4_nc3000_Co060_Fi001_MulG_PF_RR_Nsw042_220819.nc'
+ ncdata         = '/glade/work/emmons/VRM_Files/ne0np4.UK01.ne30x4/inic/cami-mam4_0000-01-01_ne0np4.UK01.ne30x4_L32_c220819.nc'
 /
+
+ mmr_sums = 'bc_sum = bc_a1 + bc_a4',
+            'pom_sum = pom_a1 + pom_a4',
+            'so4_sum = so4_a1 + so4_a2',
+            'soa_sum = soa_a1 + soa_a2'
+
+ avgflag_pertape  = 'A', 'A', 'I'
+ nhtfrq		  =   0,  -24,  -1
+ mfilt		  =   1,  30, 120
+ fincl2 = 'PS','T','Q', 'DMS', 'SO2', 'SOAG',
+          'SFDMS', 'SFSO2', 'SFbc_a4', 'SFpom_a4',
+          'bc_a1', 'bc_a4', 'dst_a1', 'dst_a2', 'dst_a3', 'ncl_a1', 'ncl_a2', 'ncl_a3', 'num_a1', 'num_a2',
+          'num_a3', 'num_a4', 'pom_a1', 'pom_a4', 'so4_a1', 'so4_a2', 'so4_a3', 'soa_a1', 'soa_a2'
+ fincl3 = 'PS','T','Q', 'U','V','bc_sum', 'pom_sum', 'so4_sum', 'soa_sum'
