@@ -20,4 +20,6 @@ Plot_2D function: https://github.com/NCAR/CAM-chem/blob/main/docs_sphinx/example
 
 Examples for Nov 2021 MUSICA Plotting Tutorial: https://github.com/NCAR/musica-tutorial
 
- 
+## Presentations
+
+[Folder of presentations](https://drive.google.com/drive/folders/1I8rhgNyhY_wKWkkciuGE5VmwbOAWpfE1?usp=sharing)
