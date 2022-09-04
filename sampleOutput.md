@@ -16,3 +16,5 @@ All CAM-chem cases have the following output file streams:
 - cam.h1: monthly avg on UK grid (unstructured grid)
 - cam.h2: daily avg of a few 3D compounds, 1-day per file
 - cam.h3: hourly output of a few species, surface only, 24 hours per file
+
+On ARC4 there is some sample output here: /home/home01/phydrm/nobackup/musica_tutorial
